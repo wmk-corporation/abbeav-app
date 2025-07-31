@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "838905730232",
+    "project_id": "abbeav-b780c",
+    "storage_bucket": "abbeav-b780c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838905730232:android:b8ddeaa564f3fa1696104d",
+        "android_client_info": {
+          "package_name": "app.devanios.abbeav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838905730232-qd43f7s871tf3o4ln2leicri3dauar7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.devanios.abbeav",
+            "certificate_hash": "19bcc14c530735d5f87ceef8bc50359bf2693f42"
+          }
+        },
+        {
+          "client_id": "838905730232-9brr78v369afu6ou40a3mh5fmcb3q3rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHehHcu4ZtjhsYMC06Oa8X7wPMhxnvFHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838905730232-9brr78v369afu6ou40a3mh5fmcb3q3rf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "838905730232-0dmub8bq7gnoifqv76ine8c54758g23o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.devanios.abbeav",
+                "app_store_id": "6748351321"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
