@@ -1,15 +1,15 @@
-# Ajoutez cette ligne en haut si elle n'existe pas
 platform :ios, '12.0'
 
-# Supprimez la ligne problématique et remplacez par :
-flutter_application_path = '../'
-load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+# Nouvelle méthode recommandée par Flutter
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), File.dirname(__FILE__)
+
+flutter_ios_podfile_setup
 
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  install_all_flutter_pods(flutter_application_path)
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
 post_install do |installer|
