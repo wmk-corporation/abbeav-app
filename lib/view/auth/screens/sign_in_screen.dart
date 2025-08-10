@@ -113,6 +113,7 @@ class _SignInScreenState extends State<SignInScreen>
         icon: Icons.error_outline,
         error: true,
       );
+      print(e.toString());
     } finally {
       if (mounted) setState(() => _loadingGoogle = false);
     }

@@ -108,6 +108,9 @@ flutter:
   assets:
      - assets/icons/
      - assets/images/
+     - assets/images/carousel/
+     - assets/images/content/
+     - assets/images/display/
      - assets/lottie/
      - assets/movies/
      - assets/logos/
