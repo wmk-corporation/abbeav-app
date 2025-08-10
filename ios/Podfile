@@ -1,6 +1,19 @@
-platform :ios, '13.0'  # iOS 13 requis pour cloud_firestore
+# Ajoutez cette ligne en haut si elle n'existe pas
+platform :ios, '12.0'
+
+# Supprimez la ligne problématique et remplacez par :
+flutter_application_path = '../'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
-  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+
+  install_all_flutter_pods(flutter_application_path)
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+  end
 end
