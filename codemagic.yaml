@@ -1,0 +1,23 @@
+workflows:
+  ios-build:
+    name: Build iOS avec Firebase
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods_repo_update: true   # met à jour les specs CocoaPods si besoin
+      ios_signing:                  # configuration du code signing
+        distribution_type: app_store
+        bundle_identifier: app.devanios.abbeav
+    scripts:
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Set up code signing on Xcode project
+        script: xcode-project use-profiles
+      - name: Install pods
+        script: find . -name "Podfile" -execdir pod install \;
+      - name: Build IPA
+        script: |
+          flutter build ipa --release \
+            --export-options-plist=/Users/builder/export_options.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
